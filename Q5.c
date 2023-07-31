@@ -1,14 +1,11 @@
-
-#include<stdio.h>
-int main()
-{
-  int m,n;
-  printf("Enter The First Integer - ");
-  scanf("%d",&m);
-  printf("\nEnter The Second Integer - ");
-  scanf("%d",&n);
-  if(m%n==0)
-    printf("\nThe First Integer Is A Multiple Of The Second Integer\n");
-  else
-    printf("\nThe First Integer Is Not A Multiple Of The Second Integer\n");
+#include <stdio.h>
+int main(void) {
+  int a,b;
+  printf("Enter A Number - ");
+  scanf("%d",&a);
+  do{
+  if(a/10==0){printf("%d",a%10);break;}
+  else {printf("%d",a%10);a=a/10;}}
+  while(a%10>=0);
+  return 0;
 }

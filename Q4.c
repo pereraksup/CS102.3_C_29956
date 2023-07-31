@@ -1,10 +1,13 @@
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
-  const float r,d,c, a, p = 3.14159;
-  printf("Enter The Radius Of The Circle - ");
-  scanf("%f", &r);
-  printf("The Diameter Of The Circle Is %f\n", 2.0 * r);
-  printf("The Circumference Of The Circle Is %f\n", 2.0 * p * r);
-  printf("The Area Of The Circle Is %f\n", p * r * r);
+  int a, b = 0, c;
+  printf("Enter A Number - ");
+  scanf("%d", &a);
+  c = a;
+  while (a != 0) {
+    b = b + a % 10;
+    a = a / 10;
+  }
+  printf("\nThe Sum Of The Digits Of The Number %d Is %d\n", c, b);
 }
